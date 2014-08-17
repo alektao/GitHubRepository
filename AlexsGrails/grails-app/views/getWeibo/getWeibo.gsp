@@ -10,14 +10,23 @@
 <body>
 <g:each in="${contents}" var="content">
     <div class="has-feedback">
-        <g:img uri="${content.userImg}"/>
-        <table>
-            <tr>Name : ${content.userScreenName}</tr>
-            <tr>Friends : ${content.userFriendsCount}    Follower : ${content.userFollowerCount}     Statuses : ${content.userStatusesCount}</tr>
-        </table>
+        <div class="table">
+            <table>
+                <tr>
+                    <td><g:img uri="${content.userImg}"/></td>
+                    <td>
+                        <table>
+                            <tr><td>Name : ${content.userScreenName}</td></tr>
+                            <tr><td>Friends : ${content.userFriendsCount}    Follower : ${content.userFollowerCount}     Statuses : ${content.userStatusesCount}</td></tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
         <div class="bg-info">
             WeiBo :${content.text}
         </div>
+        <br/>
     </div>
 </g:each>
 <g:paginate total="${contents.size()}" max="1" params="${contents}"/>

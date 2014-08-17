@@ -6,7 +6,7 @@
 	</head>
 	<body>
 			<ul>
-				<li>你大爷！</li>
+				<li>Hello Grails</li>
 			</ul>
 	</body>
 </html>
